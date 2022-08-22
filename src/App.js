@@ -6,17 +6,16 @@ import Missions from './components/Missions';
 import MyProfile from './components/MyProfile';
 import './App.css';
 
-const App = () => {
-  return (
-    <Router>
-      <Nav />
-      <Routes>
-        <Route path="/" element={<Rockets />} />
-        <Route path="/missions" element={<Missions />} />
-        <Route path="/profile" element={<MyProfile />} />
-      </Routes>
-    </Router>
-  );
-}
+
+const App = () => (
+  <Router>
+    <Nav />
+    <Routes>
+      <Route path="/" element={<Rockets />} />
+      <Route path="/missions" element={<Missions />} />
+      <Route path="/profile" element={<MyProfile />} />
+    </Routes>
+  </Router>
+);
 
 export default App;

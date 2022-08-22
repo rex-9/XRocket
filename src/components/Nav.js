@@ -35,7 +35,6 @@ const Nav = () => {
     setMissionsHover(false);
   };
 
-
   const myProfileEnter = () => {
     setMyProfileHover(true);
   };
