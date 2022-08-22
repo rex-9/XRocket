@@ -47,7 +47,7 @@ const Nav = () => {
   return (
     <nav>
       <div id="menu">
-        <header>rocketsStore CMS</header>
+        <header>Tesla</header>
         <ul>
           <li onMouseEnter={rocketsEnter} onMouseLeave={rocketsLeave}>
             <Link
