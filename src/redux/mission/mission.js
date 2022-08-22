@@ -3,22 +3,22 @@
 
 import { createSlice } from '@reduxjs/toolkit';
 
-export const rocketSlice = createSlice({
-  name: 'rocket',
+export const missionSlice = createSlice({
+  name: 'mission',
   initialState: [],
   reducers: {
-    fetchRockets: (state, action) => {
+    fetchMissions: (state, action) => {
       state = action.payload;
     },
-    deleteRocket: (state) => {
+    deleteMission: (state) => {
       // state.value -= 1;
     },
-    reserve: (state, action) => {
+    join: (state, action) => {
       // state.value += action.payload;
     },
   },
 });
 
-export const { increment, decrement, incrementByAmount } = rocketSlice.actions;
+export const { fetchMissions, deleteMission, join } = missionSlice.actions;
 
-export default rocketSlice.reducer;
+export default missionSlice.reducer;

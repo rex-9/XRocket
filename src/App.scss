@@ -1,0 +1,19 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 80px 0 80px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid gray;
+}
+
+.leftNav {
+  display: flex;
+  align-items: center;
+}
+
+.leftNav header {
+  margin-left: 40px;
+  font-size: 30px;
+  font-weight: bold;
+}
