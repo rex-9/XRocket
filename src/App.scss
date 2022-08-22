@@ -1,2 +1,23 @@
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 80px 20px 80px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid gray;
+}
 
+.leftNav {
+  display: flex;
+  align-items: center;
+}
 
+.leftNav header {
+  margin-left: 40px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.stick {
+  border-right: 1px solid black;
+}
