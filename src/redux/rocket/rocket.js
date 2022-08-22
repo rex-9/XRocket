@@ -1,11 +1,9 @@
-/* eslint-disable no-param-reassign */
-/* eslint-disable no-unused-vars */
-
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 export const rocketSlice = createSlice({
   name: 'rocket',
-  initialState: [],
+  initialState: { rockets: [] },
   reducers: {
     fetchRockets: (state, action) => {
       state = action.payload;
@@ -17,8 +15,23 @@ export const rocketSlice = createSlice({
       // state.value += action.payload;
     },
   },
+
+  extraReducers: (builder) => {
+    builder.addCase(fetchRockets.fulfilled, (state, action) => {
+      state.rockets = action.payload;
+    });
+  },
+});
+
+// All types
+const FETCH_ROCKET = 'rockets/FETCH_ROCKETS';
+
+// All thunks
+export const fetchRockets = createAsyncThunk(FETCH_ROCKET, async (thunkAPI) => {
+  const response = await axios.get('https://api.spacexdata.com/v3/rockets');
+
+  return response.data;
 });
 
 export const { increment, decrement, incrementByAmount } = rocketSlice.actions;
-
 export default rocketSlice.reducer;
