@@ -1,6 +1,10 @@
+/* eslint-disable max-len */
+
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMissions } from '../redux/mission';
+import { ActiveStatus, InactiveStatus } from '../components/Status';
+import { Join } from '../components/JoinLeave';
 
 const Missions = () => {
   const dispatch = useDispatch();
@@ -11,26 +15,26 @@ const Missions = () => {
   }, []);
 
   return (
-    <>
-      <table style={{ width: '100%' }}>
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <table style={{ width: '95%', border: '1px solid black' }}>
         <tr>
-          <th>Mission</th>
-          <th>Description</th>
-          <th>Status</th>
-          <th>Join/Leave</th>
+          <th style={{ width: '10%' }}>Mission</th>
+          <th style={{ width: '50%' }}>Description</th>
+          <th style={{ width: '8%' }}>Status</th>
+          <th style={{ width: '8%' }}>Join/Leave</th>
         </tr>
         {
-        missions.map((mission) => (
-          <tr key={mission.id} style={mission.id % 2 === 0 ? { backgroundColor: 'white' } : { backgroundColor: '#F2F2F2' }}>
-            <td>{mission.name}</td>
+        missions.map((mission, index) => (
+          <tr key={mission.id} style={index % 2 !== 0 ? { backgroundColor: 'white' } : { backgroundColor: '#F2F2F2' }}>
+            <td style={{ fontWeight: 'bold', fontSize: '18px' }}>{mission.name}</td>
             <td>{mission.description}</td>
-            <td>{Number.isNaN(parseInt(mission.id, 10)) ? 'true' : 'false'}</td>
-            <td>Join/Leave</td>
+            <td>{Number.isNaN(parseInt(mission.id, 10)) ? <ActiveStatus /> : <InactiveStatus />}</td>
+            <td><Join /></td>
           </tr>
         ))
       }
       </table>
-    </>
+    </div>
   );
 };
 

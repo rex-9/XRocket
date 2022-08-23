@@ -1,3 +1,7 @@
+body {
+  font-family: 'Quicksand', serif;
+}
+
 .menu {
   display: flex;
   justify-content: space-between;
@@ -24,4 +28,14 @@
 
 table {
   border: 2px solid black;
+}
+
+th {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+td {
+  padding: 10px;
 }
