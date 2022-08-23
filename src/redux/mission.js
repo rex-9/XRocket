@@ -7,22 +7,7 @@ const JOIN_MISSION = 'ReactGroupProject/mission/JOIN_MISSION';
 const LEAVE_MISSION = 'ReactGroupProject/mission/LEAVE_MISSION';
 const FETCH_MISSIONS = 'ReactGroupProject/mission/FETCH_MISSIONS';
 
-const initialState = [{
-  id: 1,
-  mission: 'Thaicom',
-  description: 'Description of Thaicom',
-  status: false,
-}, {
-  id: 2,
-  mission: 'Telstar',
-  description: 'Description of Telstar',
-  status: true,
-}, {
-  id: 3,
-  mission: 'Iridium NEXT',
-  description: 'Description of Iridium NEXT',
-  status: false,
-}];
+const initialState = [];
 
 // mission reducer
 export default (state = initialState, action) => {
@@ -82,23 +67,3 @@ export const leaveMission = (id) => ({
   type: LEAVE_MISSION,
   payload: id,
 });
-
-// export const joinMission = (JOIN_MISSION, async (id) => {
-//   const missions = useSelector((state) => state.missions);
-//   const newState = missions.map((mission) => {
-//     if (mission.id !== id) return mission;
-//     return { ...newState, reserved: true };
-//   });
-
-//   return newState;
-// });
-
-// export const leaveMission = (LEAVE_MISSION, async (id) => {
-//   const missions = useSelector((state) => state.missions);
-//   const newState = missions.map((mission) => {
-//     if (mission.id !== id) return mission;
-//     return { ...newState, reserved: false };
-//   });
-
-//   return newState;
-// });
