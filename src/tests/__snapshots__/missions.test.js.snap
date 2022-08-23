@@ -47,9 +47,3 @@ exports[`Render All of the components Render Pages 2`] = `
   Description
 </th>
 `;
-
-exports[`Render All of the components Render Pages 3`] = `
-<div>
-  MyProfile
-</div>
-`;

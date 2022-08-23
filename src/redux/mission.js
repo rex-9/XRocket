@@ -21,7 +21,7 @@ export default (state = initialState, action) => {
       newState = state.find((mission) => mission.id === action.payload);
       newState = {
         ...newState,
-        reserved: true,
+        joined: true,
       };
       foundIndex = state.findIndex((x) => x.id === action.payload);
       state[foundIndex] = newState;
@@ -31,7 +31,7 @@ export default (state = initialState, action) => {
       newState = state.find((mission) => mission.id === action.payload);
       newState = {
         ...newState,
-        reserved: false,
+        joined: false,
       };
       foundIndex = state.findIndex((x) => x.id === action.payload);
       state[foundIndex] = newState;
@@ -52,7 +52,7 @@ export const getMissions = createAsyncThunk(FETCH_MISSIONS, async () => {
     id: mission.mission_id,
     name: mission.mission_name,
     description: mission.description,
-    reserved: false,
+    joined: false,
   }));
 
   return missions;

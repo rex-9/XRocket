@@ -39,3 +39,37 @@ th {
 td {
   padding: 10px;
 }
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 80px 0 80px;
+}
+
+.missionProfiles {
+  width: 40%;
+}
+
+.missionProfiles h1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.missionProfiles div {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.rocketProfiles {
+  width: 40%;
+}
+
+.rocketProfiles h1 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.rocketProfiles div {
+  border: 1px solid black;
+  padding: 8px;
+}

@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# ReactGroupProject
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> The amazing ReactGroupProject project uses the real live data from the SpaceX API.
+> Rockets and Missions are displayed in respective pages.
+> Users can make and cancel reservations to Rockets.
+> Users can join and leave Missions.
+> Reserved reservations to Rockets and joined Missions are displayed in the "My Profile" page.
 
-## Available Scripts
+## Built With
 
-In the project directory, you can run:
+- JavaScript
+- React
+- Redux
+- React Testing Library
 
-### `npm start`
+## Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![ReactGroupProject](./src/assets/images/ReactGroupProject.png)
+## Live Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[ReactGroupProject](https://rex9ReactGroupProject.netlify.app/)
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get a local copy up and running:
 
-### `npm run build`
+1. Clone this repository or download the zip folder:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**`git clone https://github.com/HtetNaing0814/ReactGroupProject.git`**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Navigate to the location of the folder in your machine:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**`you@your-Pc-name:~$ cd ReactGroupProject`**
 
-### `npm run eject`
+3. Open the project with VScode:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**`code .`**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Build the node packages:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**`npm run build`**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. Run the server:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**`npm start`**
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Here is the online version of [ReactGroupProject](https://rexReactGroupProject.netlify.app/)
 
-### `npm run build` fails to minify
+## Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+👤 - Github: [@HtetNaing0814](https://github.com/HtetNaing0814/)<br>
+👤 - LinkedIn: [Htet Naing](https://www.linkedin.com/in/htetnaing0814/)<br>
+👤 - Facebook: [Htet Naing](https://www.facebook.com/rexsoul1819)<br>
+👤 - Angelist: [Htet Naing](https://angel.co/u/htetnaing0814)<br>
+
+## 🤝 Contributions
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check [issue page](https://github.com/HtetNaing0814/ReactGroupProject/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+[Microverse](https://bit.ly/MicroverseTN)
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.

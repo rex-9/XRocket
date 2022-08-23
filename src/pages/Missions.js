@@ -30,8 +30,8 @@ const Missions = () => {
           <tr key={mission.id} style={index % 2 !== 0 ? { backgroundColor: 'white' } : { backgroundColor: '#F2F2F2' }}>
             <td style={{ fontWeight: 'bold', fontSize: '18px' }}>{mission.name}</td>
             <td>{mission.description}</td>
-            <td>{mission.reserved ? <ActiveStatus /> : <InactiveStatus />}</td>
-            <td>{mission.reserved ? <Leave id={mission.id} /> : <Join id={mission.id} />}</td>
+            <td>{mission.joined ? <ActiveStatus /> : <InactiveStatus />}</td>
+            <td>{mission.joined ? <Leave id={mission.id} /> : <Join id={mission.id} />}</td>
           </tr>
         ))
       }

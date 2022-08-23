@@ -15,7 +15,7 @@ describe('Render All of the components', () => {
     expect(screen.getByText(/Description/i)).toMatchSnapshot(); // Mission component
 
     fireEvent.click(screen.getByText(/My Profile/i));
-    expect(screen.getByText(/MyProfile/i)).toMatchSnapshot(); // MyProfile component
+    expect(screen.getByText(/My Missions/i)).toMatchSnapshot(); // MyProfile component
   });
 
   test('Render Components', () => {
