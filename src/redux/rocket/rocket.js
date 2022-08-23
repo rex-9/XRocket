@@ -4,17 +4,7 @@ import axios from 'axios';
 export const rocketSlice = createSlice({
   name: 'rocket',
   initialState: { rockets: [] },
-  reducers: {
-    fetchRockets: (state, action) => {
-      state = action.payload;
-    },
-    deleteRocket: (state) => {
-      // state.value -= 1;
-    },
-    reserve: (state, action) => {
-      // state.value += action.payload;
-    },
-  },
+  reducers: {},
 
   extraReducers: (builder) => {
     builder.addCase(fetchRockets.fulfilled, (state, action) => {
@@ -33,5 +23,5 @@ export const fetchRockets = createAsyncThunk(FETCH_ROCKET, async (thunkAPI) => {
   return response.data;
 });
 
-export const { increment, decrement, incrementByAmount } = rocketSlice.actions;
+// export const {} = rocketSlice.actions;
 export default rocketSlice.reducer;
