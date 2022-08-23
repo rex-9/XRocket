@@ -11,7 +11,9 @@ const Missions = () => {
   const missions = useSelector((state) => state.missions);
 
   useEffect(() => {
-    dispatch(getMissions());
+    if (missions.length === 0) {
+      dispatch(getMissions());
+    }
   }, []);
 
   return (
