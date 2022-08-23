@@ -23,7 +23,7 @@ const ActiveStatus = () => (
 
 const InactiveStatus = () => (
   <div style={inactiveStyle}>
-    Not a member
+    Not a Member
   </div>
 );
 

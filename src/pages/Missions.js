@@ -22,7 +22,7 @@ const Missions = () => {
         <tr>
           <th style={{ width: '10%' }}>Mission</th>
           <th style={{ width: '50%' }}>Description</th>
-          <th style={{ width: '8%' }}>Status</th>
+          <th style={{ width: '9%' }}>Status</th>
           <th style={{ width: '8%' }}>Join/Leave</th>
         </tr>
         {

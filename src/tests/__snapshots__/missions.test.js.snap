@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render All of the components Render Components 1`] = `
+<button
+  style="border: 1px solid #63686c; border-radius: 5px; padding: 3px 5px; text-align: center; cursor: pointer; color: rgb(99, 104, 108);"
+  type="button"
+>
+  Join Mission
+</button>
+`;
+
+exports[`Render All of the components Render Components 2`] = `
+<div
+  style="border-radius: 5px; color: white; padding: 3px 10px; text-transform: uppercase; text-align: center; background-color: rgb(109, 117, 125);"
+>
+  Not a Member
+</div>
+`;
+
+exports[`Render All of the components Render Components 3`] = `
+<div
+  style="border-radius: 5px; color: white; padding: 3px 10px; text-align: center; background-color: rgb(27, 163, 184);"
+>
+  Active Member
+</div>
+`;
+
+exports[`Render All of the components Render Components 4`] = `
+<button
+  style="border: 1px solid #e87f88; border-radius: 5px; padding: 3px 5px; text-align: center; cursor: pointer; color: rgb(232, 127, 136);"
+  type="button"
+>
+  Leave Mission
+</button>
+`;
+
+exports[`Render All of the components Render Pages 1`] = `
+<header>
+  Space Traveler's Hub
+</header>
+`;
+
+exports[`Render All of the components Render Pages 2`] = `
+<th
+  style="width: 50%;"
+>
+  Description
+</th>
+`;
+
+exports[`Render All of the components Render Pages 3`] = `
+<div>
+  MyProfile
+</div>
+`;

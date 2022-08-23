@@ -4,12 +4,12 @@ import {
 } from '@reduxjs/toolkit';
 import { logger } from 'redux-logger';
 import thunk from 'redux-thunk';
-import missionsReducer from './mission';
-// import rocketsReducer from './rocket';
+import missionReducer from './mission';
+// import rocketReducer from './rocket';
 
 const rootReducer = combineReducers({
-  missions: missionsReducer,
-  // rockets: rocketsReducer,
+  missions: missionReducer,
+  // rockets: rocketReducer,
 });
 
 const store = configureStore({
@@ -17,4 +17,8 @@ const store = configureStore({
   middleware: [logger, thunk],
 });
 
+export const setupStore = (preloadedState) => configureStore({
+  reducer: rootReducer,
+  preloadedState,
+});
 export default store;
