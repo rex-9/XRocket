@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMissions } from '../redux/mission';
 import { ActiveStatus, InactiveStatus } from '../components/Status';
-import { Join } from '../components/JoinLeave';
+import { Join, Leave } from '../components/JoinLeave';
 
 const Missions = () => {
   const dispatch = useDispatch();
@@ -29,7 +29,7 @@ const Missions = () => {
             <td style={{ fontWeight: 'bold', fontSize: '18px' }}>{mission.name}</td>
             <td>{mission.description}</td>
             <td>{Number.isNaN(parseInt(mission.id, 10)) ? <ActiveStatus /> : <InactiveStatus />}</td>
-            <td><Join /></td>
+            <td>{mission.reserved ? <Leave id={mission.id} /> : <Join id={mission.id} />}</td>
           </tr>
         ))
       }

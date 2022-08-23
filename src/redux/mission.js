@@ -1,8 +1,10 @@
+/* eslint-disable no-param-reassign */
+
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import API from '../api';
 
-// const ADD_MISSION = 'ReactGroupProject/mission/ADD_MISSION';
-// const REMOVE_MISSION = 'ReactGroupProject/mission/REMOVE_MISSION';
+const JOIN_MISSION = 'ReactGroupProject/mission/JOIN_MISSION';
+const LEAVE_MISSION = 'ReactGroupProject/mission/LEAVE_MISSION';
 const FETCH_MISSIONS = 'ReactGroupProject/mission/FETCH_MISSIONS';
 
 const initialState = [{
@@ -24,15 +26,31 @@ const initialState = [{
 
 // mission reducer
 export default (state = initialState, action) => {
+  let newState = {};
+  let foundIndex = 0;
   switch (action.type) {
     case `${FETCH_MISSIONS}/fulfilled`:
       return [...action.payload];
 
-      // case `${ADD_MISSION}/fulfilled`:
-      //   return [...state, action.payload];
+    case JOIN_MISSION:
+      newState = state.find((mission) => mission.id === action.payload);
+      newState = {
+        ...newState,
+        reserved: true,
+      };
+      foundIndex = state.findIndex((x) => x.id === action.payload);
+      state[foundIndex] = newState;
+      return [...state];
 
-      // case `${REMOVE_MISSION}/fulfilled`:
-      //   return state.filter((mission) => mission.item_id !== action.payload);
+    case LEAVE_MISSION:
+      newState = state.find((mission) => mission.id === action.payload);
+      newState = {
+        ...newState,
+        reserved: false,
+      };
+      foundIndex = state.findIndex((x) => x.id === action.payload);
+      state[foundIndex] = newState;
+      return [...state];
 
     default:
       return state;
@@ -49,28 +67,38 @@ export const getMissions = createAsyncThunk(FETCH_MISSIONS, async () => {
     id: mission.mission_id,
     name: mission.mission_name,
     description: mission.description,
+    reserved: false,
   }));
 
   return missions;
 });
 
-// export const addMission = createAsyncThunk(ADD_MISSION, async (mission) => {
-//   await fetch(API.missionEndPoint, {
-//     method: 'POST',
-//     headers: { 'Content-Type': 'application/json' },
-//     body: JSON.stringify(mission),
+export const joinMission = (id) => ({
+  type: JOIN_MISSION,
+  payload: id,
+});
+
+export const leaveMission = (id) => ({
+  type: LEAVE_MISSION,
+  payload: id,
+});
+
+// export const joinMission = (JOIN_MISSION, async (id) => {
+//   const missions = useSelector((state) => state.missions);
+//   const newState = missions.map((mission) => {
+//     if (mission.id !== id) return mission;
+//     return { ...newState, reserved: true };
 //   });
 
-//   return mission;
+//   return newState;
 // });
 
-// export const removeMission = createAsyncThunk(REMOVE_MISSION, async (id) => {
-//   const endPoint = `${API.missionEndPoint}/${id}`;
-
-//   await fetch(endPoint, {
-//     method: 'DELETE',
-//     body: JSON.stringify({ item_id: id }),
+// export const leaveMission = (LEAVE_MISSION, async (id) => {
+//   const missions = useSelector((state) => state.missions);
+//   const newState = missions.map((mission) => {
+//     if (mission.id !== id) return mission;
+//     return { ...newState, reserved: false };
 //   });
 
-//   return id;
+//   return newState;
 // });
