@@ -1,0 +1,47 @@
+.rocket {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.rocket .rocket__img {
+  width: 300px;
+}
+
+.rocket__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reserved {
+  display: inline-block;
+  background-color: #1ba3b8;
+  padding: 2px 4px;
+  margin-right: 10px;
+  font-size: 14px;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.btn {
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.btn--primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn.btn--secondary {
+  background-color: transparent;
+  border: 1px solid #aeb2b6;
+  color: #aeb2b6;
+}
