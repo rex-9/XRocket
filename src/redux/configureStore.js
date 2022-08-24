@@ -14,9 +14,8 @@ const store = configureStore({
   middleware: [logger, thunk],
 });
 
-export const setupStore = (preloadedState) =>
-  configureStore({
-    reducer: rootReducer,
-    preloadedState,
-  });
+export const setupStore = (preloadedState) => configureStore({
+  reducer: rootReducer,
+  preloadedState,
+});
 export default store;

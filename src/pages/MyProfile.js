@@ -5,12 +5,8 @@ import { useSelector } from 'react-redux';
 const MyProfile = () => {
   const allMissions = useSelector((state) => state.missions);
   const joinedMissions = allMissions.filter(
-    (mission) => mission.joined === true
+    (mission) => mission.joined === true,
   );
-  let missions = [];
-  if (joinedMissions !== null) {
-    missions = joinedMissions;
-  }
 
   // rockets
   const rockets = useSelector((state) => state.rockets.rockets);
@@ -21,7 +17,7 @@ const MyProfile = () => {
       <div className="profile">
         <div className="missionProfiles">
           <h1>My Missions</h1>
-          {missions.map((mission) => (
+          {joinedMissions.map((mission) => (
             <div key={mission.id}>{mission.name}</div>
           ))}
         </div>

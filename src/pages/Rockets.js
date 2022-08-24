@@ -5,19 +5,17 @@ import { fetchRockets } from '../redux/rocket';
 
 function Rockets() {
   const dispatch = useDispatch();
+  const rockets = useSelector((state) => state.rockets.rockets);
 
   useEffect(() => {
-    dispatch(fetchRockets());
+    if (rockets.length === 0) {
+      dispatch(fetchRockets());
+    }
   }, []);
 
-  const rockets = useSelector((state) => state.rockets.rockets);
-  console.log(rockets);
-
   return (
-    <div style={{padding: "0 80px"}}>
-      {rockets.map((r) => {
-        return <RocketCard key={r.id} rocketData={r} />;
-      })}
+    <div style={{ padding: '0 80px' }}>
+      {rockets.map((r) => <RocketCard key={r.id} rocketData={r} />)}
     </div>
   );
 }

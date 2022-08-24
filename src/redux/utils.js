@@ -3,9 +3,9 @@ const toggleReservation = (data, id, property = 'reserved') => {
 
   newState = { ...newState, [property]: !newState[property] };
 
-  let foundIndex = data.findIndex((r) => r.id === id);
+  const foundIndex = data.findIndex((r) => r.id === id);
 
   return [foundIndex, newState];
 };
 
-export { toggleReservation };
+export default toggleReservation;
