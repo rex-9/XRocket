@@ -9,10 +9,15 @@ function RocketCard(props) {
       <div className="rocket">
         <div className="left">
           <div className="rocket__img">
-            <img src="" alt="" />
+            <img src={image} alt="" />
           </div>
         </div>
 
+        <div className='right'>
+          <h2>{rocket_name}</h2>
+          <p>{description}</p>
+          <button>Reserve</button>
+        </div>
       </div>
     </section>
   );
