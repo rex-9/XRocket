@@ -1,13 +1,14 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import './rocketCard-style.css';
+import PropTypes from 'prop-types';
 import { cancelReservation, reserveRocket } from '../redux/rocket';
 
-const RocketCard = (props) => {
+const RocketCard = ({ rocketData }) => {
   const dispatch = useDispatch();
   const {
     id, description, name, reserved, image,
-  } = props.rocketData;
+  } = rocketData;
 
   const handleReserve = (id) => {
     dispatch(reserveRocket(id));
@@ -56,6 +57,16 @@ const RocketCard = (props) => {
       </div>
     </section>
   );
+};
+
+RocketCard.protoTypes = {
+  rocketData: PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    reserved: PropTypes.bool,
+    image: PropTypes.string,
+    description: PropTypes.string,
+  }),
 };
 
 export default RocketCard;
