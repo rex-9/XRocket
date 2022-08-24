@@ -1,4 +1,4 @@
-# ReactGroupProject
+# Rockets and Missions
 
 > The amazing ReactGroupProject project uses the real live data from the SpaceX API.
 > Rockets and Missions are displayed in respective pages.
@@ -15,10 +15,12 @@
 
 ## Screenshots
 
-![ReactGroupProject](./src/assets/images/ReactGroupProject.png)
+![ReactGroupProject](./src/assets/s1.PNG)
+![ReactGroupProject](./src/assets/s2.PNG)
+
 ## Live Demo
 
-[ReactGroupProject](https://rex9ReactGroupProject.netlify.app/)
+- coming soon
 
 ## Getting Started
 
@@ -48,12 +50,18 @@ To get a local copy up and running:
 
 Here is the online version of [ReactGroupProject](https://rexReactGroupProject.netlify.app/)
 
-## Author
+## Rex
 
 👤 - Github: [@HtetNaing0814](https://github.com/HtetNaing0814/)<br>
 👤 - LinkedIn: [Htet Naing](https://www.linkedin.com/in/htetnaing0814/)<br>
 👤 - Facebook: [Htet Naing](https://www.facebook.com/rexsoul1819)<br>
 👤 - Angelist: [Htet Naing](https://angel.co/u/htetnaing0814)<br>
+
+## Bahoz
+
+👤 - Github: [Bahoz Ali](https://github.com/bahoz-ali/)<br>
+👤 - LinkedIn: [Bahoz Ali](https://www.linkedin.com/in/bahoz-ali/)<br>
+👤 - Angelist: [Htet Naing](https://angel.co/u/bahoz-ali)<br>
 
 ## 🤝 Contributions
 
