@@ -1,7 +1,7 @@
 /* eslint-disable no-param-reassign */
-
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import API from '../api';
+import { toggleReservation } from './utils';
 
 const JOIN_MISSION = 'ReactGroupProject/mission/JOIN_MISSION';
 const LEAVE_MISSION = 'ReactGroupProject/mission/LEAVE_MISSION';
@@ -13,27 +13,21 @@ const initialState = [];
 export default (state = initialState, action) => {
   let newState = {};
   let foundIndex = 0;
+  let id = action.payload;
+
   switch (action.type) {
     case `${FETCH_MISSIONS}/fulfilled`:
       return [...action.payload];
 
     case JOIN_MISSION:
-      newState = state.find((mission) => mission.id === action.payload);
-      newState = {
-        ...newState,
-        joined: true,
-      };
-      foundIndex = state.findIndex((x) => x.id === action.payload);
+      [foundIndex, newState] = toggleReservation(state, id, 'joined');
+
       state[foundIndex] = newState;
       return [...state];
 
     case LEAVE_MISSION:
-      newState = state.find((mission) => mission.id === action.payload);
-      newState = {
-        ...newState,
-        joined: false,
-      };
-      foundIndex = state.findIndex((x) => x.id === action.payload);
+      [foundIndex, newState] = toggleReservation(state, id, 'joined');
+
       state[foundIndex] = newState;
       return [...state];
 

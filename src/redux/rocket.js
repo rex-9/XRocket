@@ -1,20 +1,25 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import api from '../api';
+import { toggleReservation } from './utils';
+
+
 
 export const rocketSlice = createSlice({
   name: 'rocket',
   initialState: { rockets: [] },
   reducers: {
     reserveRocket: (state, action) => {
-      console.log('hello rex');
-      let newState = state.rockets.find(
-        (rocket) => rocket.id === action.payload
-      );
+      const id = action.payload;
 
-      newState = { ...newState, reserved: true };
+      const [foundIndex, newState] = toggleReservation(state.rockets, id);
+      state.rockets[foundIndex] = newState;
+    },
 
-      let foundIndex = state.rockets.findIndex((r) => r.id === action.payload);
+    cancelReservation: (state, action) => {
+      const id = action.payload;
+
+      const [foundIndex, newState] = toggleReservation(state.rockets, id);
       state.rockets[foundIndex] = newState;
     },
   },
@@ -44,5 +49,5 @@ export const fetchRockets = createAsyncThunk(FETCH_ROCKET, async (thunkAPI) => {
   return rockets;
 });
 
-export const { reserveRocket } = rocketSlice.actions;
+export const { reserveRocket, cancelReservation } = rocketSlice.actions;
 export default rocketSlice.reducer;

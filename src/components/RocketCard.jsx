@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import './rocketCard-style.css';
-import { reserveRocket } from '../redux/rocket';
+import { cancelReservation, reserveRocket } from '../redux/rocket';
 
 function RocketCard(props) {
   const dispatch = useDispatch();
@@ -9,6 +9,10 @@ function RocketCard(props) {
 
   const handleReserve = (id) => {
     dispatch(reserveRocket(id));
+  };
+
+  const handleCancelReserve = (id) => {
+    dispatch(cancelReservation(id));
   };
 
   return (
@@ -38,8 +42,8 @@ function RocketCard(props) {
           {reserved && (
             <button
               className="btn btn--secondary"
-              onClick={() => handleReserve(id)}>
-              Reserve Rocket
+              onClick={() => handleCancelReserve(id)}>
+              Cancel Reservation
             </button>
           )}
         </div>
