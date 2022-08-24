@@ -28,7 +28,9 @@ const Leave = (props) => {
     dispatch(leaveMission(id));
   };
   return (
-    <button type="button" style={leaveStyle} onClick={leave} onKeyDown={leave}>Leave Mission</button>
+    <button type="button" style={leaveStyle} onClick={leave} onKeyDown={leave}>
+      Leave Mission
+    </button>
   );
 };
 
@@ -40,7 +42,9 @@ const Join = (props) => {
     dispatch(joinMission(id));
   };
   return (
-    <button type="button" style={joinStyle} onClick={join} onKeyDown={join}>Join Mission</button>
+    <button type="button" style={joinStyle} onClick={join} onKeyDown={join}>
+      Join Mission
+    </button>
   );
 };
 
@@ -52,4 +56,4 @@ Join.propTypes = {
   id: PropTypes.string.isRequired,
 };
 
-export { Join, Leave };
+export { Leave, Join };
