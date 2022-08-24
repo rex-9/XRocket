@@ -11,7 +11,7 @@ const rootReducer = combineReducers({
 
 const store = configureStore({
   reducer: rootReducer,
-  middleware: [thunk],
+  middleware: [logger, thunk],
 });
 
 export const setupStore = (preloadedState) =>

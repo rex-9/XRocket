@@ -9,7 +9,6 @@ export const rocketSlice = createSlice({
 
   extraReducers: (builder) => {
     builder.addCase(fetchRockets.fulfilled, (state, action) => {
-    
       state.rockets = action.payload;
     });
   },
@@ -22,7 +21,15 @@ const FETCH_ROCKET = 'rockets/FETCH_ROCKETS';
 export const fetchRockets = createAsyncThunk(FETCH_ROCKET, async (thunkAPI) => {
   const response = await axios.get(api.rocketEndPoint);
 
-  return response.data;
+  const rockets = response.data.map((rocket) => ({
+    id: rocket.id,
+    name: rocket.rocket_name,
+    description: rocket.description,
+    image: rocket.flickr_images[0],
+    reserved: false,
+  }));
+
+  return rockets;
 });
 
 // export const {} = rocketSlice.actions;

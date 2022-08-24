@@ -14,7 +14,7 @@ function Rockets() {
   console.log(rockets);
 
   return (
-    <div>
+    <div style={{padding: "0 80px"}}>
       {rockets.map((r) => {
         return <RocketCard key={r.id} rocketData={r} />;
       })}

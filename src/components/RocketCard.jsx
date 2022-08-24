@@ -1,8 +1,9 @@
 import React from 'react';
+import './rocketCard-style.css';
 
 function RocketCard(props) {
-  const { id, description, rocket_name } = props.rocketData;
-  const image = props.rocketData.flickr_images[0];
+  let { id, description, name, reserved, image } = props.rocketData;
+  reserved = true;
 
   return (
     <section className="rocket-card-component">
@@ -13,9 +14,12 @@ function RocketCard(props) {
           </div>
         </div>
 
-        <div className='right'>
-          <h2>{rocket_name}</h2>
-          <p>{description}</p>
+        <div className="right">
+          <h2>{name}</h2>
+          <p>
+            {reserved && <span className="reserved">Reserved</span>}
+            {description}
+          </p>
           <button>Reserve</button>
         </div>
       </div>
