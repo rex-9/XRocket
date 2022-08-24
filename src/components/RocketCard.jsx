@@ -4,12 +4,17 @@ function RocketCard(props) {
   const { id, description, rocket_name } = props.rocketData;
   const image = props.rocketData.flickr_images[0];
 
-  console.log('waht:', rocket_name);
-
   return (
-    <div>
-      <p>{rocket_name}</p>
-    </div>
+    <section className="rocket-card-component">
+      <div className="rocket">
+        <div className="left">
+          <div className="rocket__img">
+            <img src="" alt="" />
+          </div>
+        </div>
+
+      </div>
+    </section>
   );
 }
 
