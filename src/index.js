@@ -12,3 +12,6 @@ root.render(
     </Provider>
   </React.StrictMode>,
 );
+
+    // "react/prop-types": "off",
+    // "no-param-reassign": "off"
