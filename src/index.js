@@ -10,8 +10,5 @@ root.render(
     <Provider store={store}>
       <App />
     </Provider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
-
-    // "react/prop-types": "off",
-    // "no-param-reassign": "off"
