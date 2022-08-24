@@ -24,3 +24,23 @@
   border-radius: 3px;
   color: #fff;
 }
+
+.btn {
+  padding: 4px 10px;
+  border-radius: 3px;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+
+}
+
+.btn.btn--primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn.btn--secondary {
+  background-color: transparent;
+  border: 1px solid black;
+  color: black;
+}

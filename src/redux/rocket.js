@@ -5,7 +5,19 @@ import api from '../api';
 export const rocketSlice = createSlice({
   name: 'rocket',
   initialState: { rockets: [] },
-  reducers: {},
+  reducers: {
+    reserveRocket: (state, action) => {
+      console.log('hello rex');
+      let newState = state.rockets.find(
+        (rocket) => rocket.id === action.payload
+      );
+
+      newState = { ...newState, reserved: true };
+
+      let foundIndex = state.rockets.findIndex((r) => r.id === action.payload);
+      state.rockets[foundIndex] = newState;
+    },
+  },
 
   extraReducers: (builder) => {
     builder.addCase(fetchRockets.fulfilled, (state, action) => {
@@ -32,5 +44,5 @@ export const fetchRockets = createAsyncThunk(FETCH_ROCKET, async (thunkAPI) => {
   return rockets;
 });
 
-// export const {} = rocketSlice.actions;
+export const { reserveRocket } = rocketSlice.actions;
 export default rocketSlice.reducer;

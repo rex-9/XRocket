@@ -1,9 +1,15 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import './rocketCard-style.css';
+import { reserveRocket } from '../redux/rocket';
 
 function RocketCard(props) {
-  let { id, description, name, reserved, image } = props.rocketData;
-  reserved = true;
+  const dispatch = useDispatch();
+  const { id, description, name, reserved, image } = props.rocketData;
+
+  const handleReserve = (id) => {
+    dispatch(reserveRocket(id));
+  };
 
   return (
     <section className="rocket-card-component">
@@ -20,7 +26,22 @@ function RocketCard(props) {
             {reserved && <span className="reserved">Reserved</span>}
             {description}
           </p>
-          <button>Reserve</button>
+
+          {!reserved && (
+            <button
+              className="btn btn--primary"
+              onClick={() => handleReserve(id)}>
+              Reserve Rocket
+            </button>
+          )}
+
+          {reserved && (
+            <button
+              className="btn btn--secondary"
+              onClick={() => handleReserve(id)}>
+              Reserve Rocket
+            </button>
+          )}
         </div>
       </div>
     </section>
