@@ -1,5 +1,4 @@
 import { useDispatch } from 'react-redux';
-import PropTypes from 'prop-types';
 import { joinMission, leaveMission } from '../redux/mission';
 
 const leaveStyle = {
@@ -42,14 +41,6 @@ const Join = (props) => {
   return (
     <button type="button" style={joinStyle} onClick={join} onKeyDown={join}>Join Mission</button>
   );
-};
-
-Leave.propTypes = {
-  id: PropTypes.string.isRequired,
-};
-
-Join.propTypes = {
-  id: PropTypes.string.isRequired,
 };
 
 export { Join, Leave };
