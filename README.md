@@ -15,12 +15,9 @@
 
 ## Screenshots
 
-![ReactGroupProject](./src/assets/s1.PNG)
-![ReactGroupProject](./src/assets/s2.PNG)
-
-## Live Demo
-
-- coming soon
+![Xrockets](./src/assets/Xrockets.png)
+![Xmissions](./src/assets/Xmissions.png)
+![Xprofiles](./src/assets/Xprofile.png)
 
 ## Getting Started
 
@@ -48,14 +45,15 @@ To get a local copy up and running:
 
 ### Deployment
 
-Here is the online version of [ReactGroupProject](https://rexReactGroupProject.netlify.app/)
+Here is the online version of [ReactGroupProject](https://xrocket.netlify.app/)
 
 ## Rex
 
-👤 - Github: [@HtetNaing0814](https://github.com/HtetNaing0814/)<br>
-👤 - LinkedIn: [Htet Naing](https://www.linkedin.com/in/htetnaing0814/)<br>
-👤 - Facebook: [Htet Naing](https://www.facebook.com/rexsoul1819)<br>
-👤 - Angelist: [Htet Naing](https://angel.co/u/htetnaing0814)<br>
+👤 - Github: [@rex-9](https://github.com/rex-9/)<br>
+👤 - Medium: [@rex9](https://medium.com/rex9/)<br>
+👤 - LinkedIn: [@rex9](https://www.linkedin.com/in/rex9/)<br>
+👤 - Facebook: [@htetnaing0814](https://www.facebook.com/htetnaing0814)<br>
+👤 - Angelist: [@rex9](https://angel.co/u/rex9)<br>
 
 ## Bahoz
 
