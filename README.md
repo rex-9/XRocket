@@ -1,6 +1,6 @@
 # Rockets and Missions
 
-> The amazing ReactGroupProject project uses the real live data from the SpaceX API.
+> The amazing Xrocket project uses the real live data from the SpaceX API.
 > Rockets and Missions are displayed in respective pages.
 > Users can make and cancel reservations to Rockets.
 > Users can join and leave Missions.
@@ -25,11 +25,11 @@ To get a local copy up and running:
 
 1. Clone this repository or download the zip folder:
 
-**`git clone https://github.com/HtetNaing0814/ReactGroupProject.git`**
+**`git clone https://github.com/HtetNaing0814/Xrocket.git`**
 
 2. Navigate to the location of the folder in your machine:
 
-**`you@your-Pc-name:~$ cd ReactGroupProject`**
+**`you@your-Pc-name:~$ cd Xrocket`**
 
 3. Open the project with VScode:
 
@@ -45,7 +45,7 @@ To get a local copy up and running:
 
 ### Deployment
 
-Here is the online version of [ReactGroupProject](https://xrocket.netlify.app/)
+Here is the online version of [Xrocket](https://xrocket.netlify.app/)
 
 ## Rex
 
@@ -65,7 +65,7 @@ Here is the online version of [ReactGroupProject](https://xrocket.netlify.app/)
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check [issue page](https://github.com/HtetNaing0814/ReactGroupProject/issues).
+Feel free to check [issue page](https://github.com/HtetNaing0814/Xrocket/issues).
 
 ## Show your support
 
